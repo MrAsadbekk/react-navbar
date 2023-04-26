@@ -1,10 +1,10 @@
-import Navbar from "./components/navbar/Navbar";
+import TestInput from "./components/testInput/TestInput";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      <TestInput />
     </div>
   );
 }
