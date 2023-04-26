@@ -1,12 +1,9 @@
-import Navbar from "./components/navbar/Navbar";
-import Modal from "./components/modal/Modal";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <Modal />
+      <h2>SWalieojrnbie</h2>
     </div>
   );
 }
