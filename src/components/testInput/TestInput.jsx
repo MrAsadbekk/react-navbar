@@ -2,11 +2,11 @@ import { useState } from "react";
 import "../testInput/testinput.scss";
 
 const TestInput = () => {
-  const [newTodo, setNewTodo] = useState("");
+  const [newTodo, setNewTodo] = useState([]);
 
   const [todos, setTodos] = useState(() => {
     const storedTodo = localStorage.getItem("todos");
-    return storedTodo ? JSON.parse(storedTodo) : [];
+    // return storedTodo ? JSON.parse(storedTodo) : [];
   });
 
   const handleTodoChange = (e) => {
@@ -28,7 +28,7 @@ const TestInput = () => {
   return (
     <div className="container">
       <h1 className="title">Add User</h1>
-      <form className="form">
+      <form className="form" onSubmit={handleNewTodoSubmit}>
         <input
           className="input"
           type="text"
