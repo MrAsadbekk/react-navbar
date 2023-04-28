@@ -1,12 +1,12 @@
 import "./App.css";
-// import TestInput from "./components/testInput/TestInput";
-import Data from "./components/data/Data";
+import TestInput from "./components/testInput/TestInput";
+// import Data from "./components/data/Data";
 
 function App() {
   return (
     <div className="App">
-      {/* <TestInput /> */}
-      <Data />
+      <TestInput />
+      {/* <Data /> */}
     </div>
   );
 }
