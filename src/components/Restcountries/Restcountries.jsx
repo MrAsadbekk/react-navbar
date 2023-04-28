@@ -22,7 +22,6 @@ const Restcountries = () => {
 
   return (
     <div className="container">
-      <h1>User Data</h1>
       <div className="box">
         {data.map((element) => (
           <div key={element.id} className="minibox">
