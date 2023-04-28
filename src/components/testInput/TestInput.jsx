@@ -13,15 +13,36 @@ const TestInput = () => {
     setNewTodo(e.target.value);
   };
 
+  const handleNewTodoSubmit = (e) => {
+    e.preventDefault();
+
+    if (!newTodo.trim()) return;
+
+    setTodos([...todos, { id: Date.now(), text: newTodo }]);
+
+    setNewTodo("");
+  };
+
+  localStorage.setItem("todos", JSON.stringify(todos));
+
   return (
     <div className="container">
+      <h1 className="title">Add User</h1>
       <form className="form">
-        <input className="input" type="text" placeholder="FirstName" />
+        <input
+          className="input"
+          type="text"
+          placeholder="FirstName"
+          value={newTodo}
+          onChange={handleTodoChange}
+        />
         <input className="input" type="text" placeholder="LastName" />
         <input className="input" type="text" placeholder="UserName" />
         <input className="input" type="number" placeholder="Age" />
         <input className="input" type="number" placeholder="Salary" />
-        <button type="submit">Submit</button>
+        <button className="btn" type="submit">
+          Submit
+        </button>
       </form>
       <div>
         <h1>User Detalis</h1>
