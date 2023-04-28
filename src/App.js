@@ -1,12 +1,14 @@
-import Navbar from "./components/navbar/Navbar";
-import Modal from "./components/modal/Modal";
 import "./App.css";
+// import TestInput from "./components/testInput/TestInput";
+// import Data from "./components/data/Data";
+import Restcountries from "./components/Restcountries/Restcountries";
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <Modal />
+      {/* <TestInput /> */}
+      {/* <Data /> */}
+      <Restcountries />
     </div>
   );
 }
