@@ -25,7 +25,11 @@ const Restcountries = () => {
       <div className="box">
         {data.map((element) => (
           <div key={element.id} className="minibox">
-            <img src={element.flags.png} alt={element.flags.alt} />
+            <img
+              className="flag__img"
+              src={element.flags.png}
+              alt={element.flags.alt}
+            />
             <p>{element.name.common}</p>
           </div>
         ))}
