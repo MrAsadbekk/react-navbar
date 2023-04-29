@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
@@ -22,9 +23,10 @@ const Restcountries = () => {
 
   return (
     <div className="container">
+      <h1>Router</h1>
       <div className="box">
         {data.map((element) => (
-          <div key={element.id} className="minibox">
+          <div className="minibox">
             <img
               className="flag__img"
               src={element.flags.png}
