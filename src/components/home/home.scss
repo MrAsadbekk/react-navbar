@@ -1,0 +1,12 @@
+.container {
+  max-width: 1440px;
+  padding: 0 40px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.home__box {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+}
