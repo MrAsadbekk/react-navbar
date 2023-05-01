@@ -10,7 +10,7 @@ const Restcountries = () => {
   const getData = async () => {
     try {
       const response = await axios.get("https://restcountries.com/v3.1/all");
-      console.log(response.data);
+      // console.log(response.data);
       setData(response.data);
     } catch (error) {
       console.error(error);
@@ -26,7 +26,7 @@ const Restcountries = () => {
       <h1>Router</h1>
       <div className="box">
         {data.map((element) => (
-          <div className="minibox">
+          <div key={element.name.common} className="minibox">
             <img
               className="flag__img"
               src={element.flags.png}
