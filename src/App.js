@@ -8,8 +8,6 @@ import Error from "./components/error/Error";
 function App() {
   return (
     <div className="App">
-      {/* <TestInput /> */}
-      {/* <Data /> */}
       <BrowserRouter>
         <Routes>
           <Route element={<Restcountries />} path="/" />
