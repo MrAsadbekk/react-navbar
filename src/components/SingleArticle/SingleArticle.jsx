@@ -29,9 +29,7 @@ const SingleArticle = () => {
       <div>
         {console.log(newsData)}
         {/* <img src={newsData[0].flags.png} alt="" /> */}
-        <div>
-          <h1>{newsData[0].name.common}</h1>
-        </div>
+        <div>{/* <h1>{newsData[0].name.common}</h1> */}</div>
       </div>
     </div>
   );
