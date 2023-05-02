@@ -1,9 +1,11 @@
 .navbar {
-  position: fixed;
-  left: 150px;
+  position: absolute;
+  left: 0;
   width: 272px;
   top: 30px;
   text-align: left;
+  border-right: 1px solid #000;
+  padding-left: 70px;
 
   &__logo {
     margin-bottom: 50px;
@@ -37,56 +39,56 @@
     display: block;
     content: url("../../images/home.svg");
     position: absolute;
-    left: 0;
+    left: 70px;
   }
 
   &__nav_link-two::before {
     display: block;
     content: url("../../images/explore.svg");
     position: absolute;
-    left: 0;
+    left: 70px;
   }
 
   &__nav_link-three::before {
     display: block;
     content: url("../../images/notification.svg");
     position: absolute;
-    left: 0;
+    left: 70px;
   }
 
   &__nav_link-four::before {
     display: block;
     content: url("../../images/messages.svg");
     position: absolute;
-    left: 0;
+    left: 70px;
   }
 
   &__nav_link-fiwe::before {
     display: block;
     content: url("../../images/bookmarks.svg");
     position: absolute;
-    left: 0;
+    left: 70px;
   }
 
   &__nav_link-six::before {
     display: block;
     content: url("../../images/lists.svg");
     position: absolute;
-    left: 0;
+    left: 70px;
   }
 
   &__nav_link-seven::before {
     display: block;
     content: url("../../images/profile.svg");
     position: absolute;
-    left: 0;
+    left: 70px;
   }
 
   &__nav_link-eight::before {
     display: block;
     content: url("../../images/more.svg");
     position: absolute;
-    left: 0;
+    left: 70px;
   }
 
   &__nav-link::after {
