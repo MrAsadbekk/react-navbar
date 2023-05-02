@@ -1,5 +1,7 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import Logo from "../../images/twitterLogo.svg";
+import profile from "../../images/navbar_box_img.png";
 import "../Navbar/Navbar.scss";
 
 const Navbar = () => {
@@ -11,56 +13,74 @@ const Navbar = () => {
       <nav className="navbar__nav">
         <ul className="navbar__list">
           <li className="navbar__item">
-            <a className="navbar__nav-link" href="#">
+            <NavLink className="navbar__nav-link navbar__nav_link-one" to={"/"}>
               Home
-            </a>
+            </NavLink>
           </li>
           <li className="navbar__item">
-            <a className="navbar__nav-link" href="#">
+            <NavLink
+              to={"/Explore"}
+              className="navbar__nav-link navbar__nav_link-two"
+            >
               Explore
-            </a>
+            </NavLink>
           </li>
           <li className="navbar__item">
-            <a className="navbar__nav-link" href="#">
-              Notification
-            </a>
+            <NavLink
+              to={"/Notofications"}
+              className="navbar__nav-link navbar__nav_link-three"
+            >
+              Notofications
+            </NavLink>
           </li>
           <li className="navbar__item">
-            <a className="navbar__nav-link" href="#">
+            <NavLink
+              to={"/Messages"}
+              className="navbar__nav-link navbar__nav_link-four"
+            >
               Messages
-            </a>
+            </NavLink>
           </li>
           <li className="navbar__item">
-            <a className="navbar__nav-link" href="#">
+            <NavLink
+              to={"/Bookmarks"}
+              className="navbar__nav-link navbar__nav_link-fiwe"
+            >
               Bookmarks
-            </a>
+            </NavLink>
           </li>
           <li className="navbar__item">
-            <a className="navbar__nav-link" href="#">
+            <NavLink
+              to={"/Lists"}
+              className="navbar__nav-link navbar__nav_link-six"
+            >
               Lists
-            </a>
+            </NavLink>
           </li>
           <li className="navbar__item">
-            <a className="navbar__nav-link" href="#">
+            <NavLink
+              to={"/Account"}
+              className="navbar__nav-link navbar__nav_link-seven"
+            >
               Profile
-            </a>
+            </NavLink>
           </li>
           <li className="navbar__item">
-            <a className="navbar__nav-link" href="#">
+            <NavLink className="navbar__nav-link navbar__nav_link-eight">
               More
-            </a>
+            </NavLink>
           </li>
         </ul>
-        <button className="navbar__btn">Twwet</button>
+        <button className="navbar__btn">Tweet</button>
       </nav>
       <div className="navbar__box">
-        <img className="navbar__box-img" src="" alt="" />
+        <img className="navbar__box-img" src={profile} alt="" />
         <div className="navbar__minibox">
           <div>
-            <h3 className="navbar__minibox-title"></h3>
-            <p className="navbar__minibox-text"></p>
+            <h3 className="navbar__minibox-title">Bobur</h3>
+            <p className="navbar__minibox-text">@bobur_mavlonov</p>
           </div>
-          <a className="navbar__box-link" href="#"></a>
+          <button className="navbar__box-btn" href="#"></button>
         </div>
       </div>
     </div>

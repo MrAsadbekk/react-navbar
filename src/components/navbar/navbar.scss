@@ -19,4 +19,136 @@
     gap: 30px;
     margin-bottom: 30px;
   }
+
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__nav-link {
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+  }
+
+  &__nav_link-one::before {
+    display: block;
+    content: url("../../images/home.svg");
+    position: absolute;
+    left: 0;
+  }
+
+  &__nav_link-two::before {
+    display: block;
+    content: url("../../images/explore.svg");
+    position: absolute;
+    left: 0;
+  }
+
+  &__nav_link-three::before {
+    display: block;
+    content: url("../../images/notification.svg");
+    position: absolute;
+    left: 0;
+  }
+
+  &__nav_link-four::before {
+    display: block;
+    content: url("../../images/messages.svg");
+    position: absolute;
+    left: 0;
+  }
+
+  &__nav_link-fiwe::before {
+    display: block;
+    content: url("../../images/bookmarks.svg");
+    position: absolute;
+    left: 0;
+  }
+
+  &__nav_link-six::before {
+    display: block;
+    content: url("../../images/lists.svg");
+    position: absolute;
+    left: 0;
+  }
+
+  &__nav_link-seven::before {
+    display: block;
+    content: url("../../images/profile.svg");
+    position: absolute;
+    left: 0;
+  }
+
+  &__nav_link-eight::before {
+    display: block;
+    content: url("../../images/more.svg");
+    position: absolute;
+    left: 0;
+  }
+
+  &__nav-link::after {
+    display: block;
+    content: "";
+    border-bottom: 2px solid #000;
+    transform: scaleX(0);
+    transition: all 0.3s;
+  }
+
+  &__nav-link:hover::after {
+    transform: scaleX(1);
+  }
+
+  &__btn {
+    width: 70%;
+    text-align: center;
+    padding: 15px 0;
+    border-radius: 25px;
+    border: none;
+    background-color: #006aaf;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  &__btn:hover {
+    transform: scale(1.1);
+  }
+
+  &__box {
+    margin-top: 250px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__minibox {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__minibox-title {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__minibox-text {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__box-btn {
+    width: 20px;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    background-image: url(../../images/Vector.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotate(90deg);
+    cursor: pointer;
+  }
 }
