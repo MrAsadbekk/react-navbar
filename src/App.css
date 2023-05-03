@@ -1,9 +1,10 @@
 .App {
   text-align: center;
-  /* max-width: 1600px;
+  max-width: 1600px;
   margin: 0 auto;
   position: relative;
-  display: flex; */
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
 }
 
 .App-logo {

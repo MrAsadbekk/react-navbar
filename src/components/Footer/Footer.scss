@@ -1,14 +1,15 @@
 .footer {
   width: 373px;
-  position: absolute;
-  right: 0;
-  top: 30px;
-  border-left: 1px solid #000;
+  // position: fixed;
+  // right: 0;
+  // top: 30px;
   padding-left: 28px;
+  // padding-right: 70px;
+  padding-top: 30px;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding-right: 70px;
+  border-left: 1px solid #000;
 
   &__search {
     width: 200px;

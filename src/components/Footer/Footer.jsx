@@ -34,14 +34,6 @@ const Footer = () => {
           </div>
           <button className="footer__btn-two"></button>
         </div>
-        <div className="footer__minibox">
-          <div>
-            <p className="footer__text-one">Trending in Germany</p>
-            <p className="footer__text-two">Revolution</p>
-            <p className="footer__text-three">50.4K Tweets</p>
-          </div>
-          <button className="footer__btn-two"></button>
-        </div>
         <a className="footer__link" href="#">
           Show more
         </a>
