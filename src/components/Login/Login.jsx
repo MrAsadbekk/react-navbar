@@ -1,26 +1,57 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useState } from "react";
 import "../Login/Login.scss";
+import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../Context/AuthContext";
 
 const Login = () => {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
 
+  const { setToken } = useContext(AuthContext);
+
+  const navigete = useNavigate();
+
+  const hadnleUserName = (e) => {
+    return setUserName(e.target.value);
+  };
+
+  const hadnlePassword = (e) => {
+    return setPassword(e.target.value);
+  };
+
+  const data = {
+    email: userName,
+    password: password,
+  };
+
   const handleSubit = (e) => {
     e.preventDefault();
     // console.log(userName, password);
 
-    const data = {
-      email: userName,
-      password: password,
-    };
-
     fetch("https://reqres.in/api/login", {
       method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify(data),
     })
-      .then((response) => response.json())
-      .then((data) => console.log(data))
+      .then((response) => {
+        if (response.status !== 200) {
+          alert("Foydalanuvchi Topilmadi");
+        }
+
+        return response.json();
+      })
+      .then((data) => {
+        console.log(data);
+
+        if (data.token) {
+          setToken(data.token);
+          localStorage.setItem("token", data.token);
+          navigete("/");
+        }
+      })
       .catch((error) => console.error(error));
   };
 
@@ -38,9 +69,7 @@ const Login = () => {
           <span className="far fa-user"></span>
           <input
             value={userName}
-            onChange={(e) => {
-              setUserName(e.target.value);
-            }}
+            onChange={hadnleUserName}
             type="text"
             name="userName"
             id="userName"
@@ -51,9 +80,7 @@ const Login = () => {
           <span className="fas fa-key"></span>
           <input
             value={password}
-            onChange={(e) => {
-              setPassword(e.target.value);
-            }}
+            onChange={hadnlePassword}
             type="password"
             name="password"
             id="pwd"

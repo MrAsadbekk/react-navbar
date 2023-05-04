@@ -1,14 +1,31 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AuthContext } from "../../Context/AuthContext";
+import { Link } from "react-router-dom";
+
 import "../Home/Home.scss";
 import profileImg from "../../images/navbar_box_img.png";
 import commentImgOne from "../../images/commentImg1.png";
 import commentImgTwo from "../../images/commentImg2.png";
 
 const Home = () => {
+  const { token, setToken } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    setToken(null);
+    localStorage.removeItem("token");
+  };
+
   return (
     <div className="home__container">
       <div className="home__box-one">
-        <h1 className="home__title">Home</h1>
+        <h1 className="home__title">
+          {token ? "Welcome" : "You are not registered"}
+        </h1>
+        {token ? (
+          <button onClick={handleLogOut}>LogOut</button>
+        ) : (
+          <Link to={"/Login"}>Login</Link>
+        )}
       </div>
       <div className="home__box-two">
         <img src={profileImg} alt="" />
